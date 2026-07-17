@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Mon, May 18, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome link-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--header-->
+    	<section class = "header" id = "site-header">
+    		<!--announcement bar-->
+      		<div class = "header-announcement">
+        		<p> Free shipping on orders over Ksh 9,000 </p>
+      		</div>
+      		
+
+      		<div class = "container">
+        		<header class = "header-inner">
+
+        			<!--logo-->
+		          	<a href = "index.html" class = "logo" aria-label = "Miss Hair Affair — Home">
+		            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "logo-img" />
+		            	<span class = "logo-wordmark"> Miss Hair <em> Affair </em> </span>
+		          	</a>
+		          	<!--logo end-->
+
+		          	<!--primary nav-->
+		          	<nav class = "nav" id = "main-nav" aria-label = "Main navigation">
+		          		<button class = "nav-close" id = "nav-close" aria-label = "Close menu">
+							<i class = "fas fa-times"></i>
+						</button>
+
+		            	<a href = "index.html" class = "nav-link"> Home </a>
+		            	<a href = "shop.html" class = "nav-link"> Shop </a>
+		            	<a href = "about.html" class = "nav-link"> About </a>
+		            	<a href = "contact.html" class = "nav-link is-active"> Contact </a>
+		          	</nav>
+		          	<!--primary nav end-->
+
+		          	<!--actions-->
+		          	<div class = "header-actions">
+		            	<!--search toggle-->
+		            	<button	class = "icon-btn search-toggle" 
+		            			id = "search-toggle" 
+		            			aria-label = "Open search" 
+		            			aria-expanded = "false">
+		              			<i class = "fas fa-search" id = "search-icon"></i>
+		            	</button>
+
+		            	<!--cart count-->
+			            <a 	href = "cart.html" 
+			            	class = "icon-btn cart-btn" 
+			            	aria-label = "Shopping cart, 2 items">
+			              	<i class = "fas fa-shopping-bag"></i>
+			              	<span class = "cart-badge" aria-hidden = "true"> 2 </span>
+			            </a>
+
+			            <!--hamburger (mobile)-->
+			            <button		class = "hamburger" 
+			            			id = "hamburger" 
+			            			aria-label = "Open menu" 
+			            			aria-expanded = "false" 
+			            			aria-controls = "main-nav">
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			            </button>
+		          	</div>
+		          	<!--actions end-->
+
+        		</header>
+        	</div>
+
+        	<!--search bar — slides down under the header bar-->
+	      	<div class = "search-bar" id = "search-bar" aria-hidden = "true">
+	        	<div class = "container">
+	          		<div class = "search-bar--inner">
+	            		<i class = "fas fa-search search-bar--icon"></i>
+	            		
+	            		<input	type = "search"
+	              				id = "search-input"
+	              				class = "search-bar--input"
+	              				placeholder = "Search for products . . ."
+	              				autocomplete = "off"
+	              				aria-label = "Search products" />
+	            		
+	            		<button class = "search-bar--close" id = "search-close" aria-label = "Close search">
+	              			<i class = "fas fa-times"></i>
+	            		</button>
+	          		</div>
+	        	</div>
+	      	</div>
+
+      	</section>
+      	<!--header end-->
+
+      	<!--overlay for mobile nav-->
+    	<div class = "nav-overlay" id = "nav-overlay" aria-hidden = "true"></div>
+
+    	<!--contact-->
+		<section class = "contact" aria-label = "Contact Miss Hair Affair">
+
+			<!--hero band (mirrors about page)-->
+		  	<div class = "contact-hero">
+			    <div class = "contact-hero-bg" aria-hidden = "true"></div>
+			    
+			    <div class = "container">
+			      	<div class = "contact-hero-inner">
+				        <p class = "contact-hero-eyebrow">
+				          	<span class = "contact-hero-dash"></span>
+				          	Get in Touch
+				          	<span class = "contact-hero-dash"></span>
+				        </p>
+				        <h1 class = "contact-hero-headline"> We'd Love to <em> Hear from You </em> </h1>
+				        <p class = "contact-hero-sub">
+				          	Have a question, need skin care advice, or want to know more about our products?
+				          	We're here for you.
+				        </p>
+			      	</div>
+			    </div>
+		  	</div>
+
+		  	<!--main-->
+		  	<div class = "container">
+			    <div class = "contact-inner">
+
+			    	<!--info sidebar-->
+			      	<aside class = "contact-sidebar" aria-label = "Contact information">
+
+				        <div class = "contact-sidebar-header">
+				          	<p class = "section-eyebrow">
+				            	<span class = "section-eyebrow-line"></span>
+				            	Reach Us
+				          	</p>
+				          	<h2 class = "contact-sidebar-title"> Let's Start a <br /> <em> Conversation </em> </h2>
+				          	<p class = "contact-sidebar-desc">
+				            	Our team is ready to help — whether it's a product question or a full skin care consultation.
+				          	</p>
+				        </div>
+
+				        <ul class = "contact-info-list" aria-label = "Contact details">
+				          	<li class = "contact-info-item">
+					            <div class = "contact-info-icon" aria-hidden = "true">
+					              	<i class = "fas fa-phone-alt"></i>
+					            </div>
+					            <div class = "contact-info-text">
+					              	<strong> Phone </strong>
+					              	<a href = "tel:+254700111222"> +254 700 111 222 </a>
+					            </div>
+				          	</li>
+
+				          	<li class = "contact-info-item">
+					            <div class = "contact-info-icon" aria-hidden = "true">
+					              	<i class = "fas fa-envelope"></i>
+					            </div>
+					            <div class = "contact-info-text">
+					              	<strong> Email </strong>
+					              	<a href = "mailto:info@misshairaffair.com"> info@misshairaffair.com </a>
+					            </div>
+				          	</li>
+				          
+				          	<li class = "contact-info-item">
+					            <div class = "contact-info-icon" aria-hidden = "true">
+					              	<i class = "fas fa-map-marker-alt"></i>
+					            </div>
+					            <div class = "contact-info-text">
+					              	<strong> Location </strong>
+					              	<span> Nairobi, Kenya </span>
+					            </div>
+				          	</li>
+				          
+				          	<li class = "contact-info-item">
+					            <div class = "contact-info-icon" aria-hidden = "true">
+					              	<i class = "fas fa-clock"></i>
+					            </div>
+					            <div class = "contact-info-text">
+					              	<strong> Hours </strong>
+					              	<span> Mon – Sat, 9am – 6pm EAT </span>
+					            </div>
+				          	</li>
+				        </ul>
+
+				        <!--socials-->
+				        <div class = "contact-socials">
+				          	<p class = "contact-socials-label"> Follow Us </p>
+				          	<div class = "contact-socials-row">
+					            <a href = "" class = "contact-social-btn" aria-label = "TikTok">
+					              	<i class = "fab fa-tiktok"></i>
+					            </a>
+					            <a href = "" class = "contact-social-btn" aria-label = "Instagram">
+					              	<i class = "fab fa-instagram"></i>
+					            </a>
+					            <a href = "" class = "contact-social-btn" aria-label = "Facebook">
+					              	<i class = "fab fa-facebook-f"></i>
+					            </a>
+				          	</div>
+				        </div>
+
+			      	</aside>
+			      	<!--info side bar end-->
+
+			      	<!--form card-->
+			      	<div class = "contact-form-wrap">
+				        <form class = "contact-form" novalidate aria-label = "Contact form">
+
+				          	<div class = "contact-form-header">
+					            <p class = "section-eyebrow">
+					              	<span class = "section-eyebrow-line"></span>
+					              	Send a Message
+					            </p>
+					            <h2 class = "contact-form-title"> How Can We <br /> <em> Help You? </em> </h2>
+				          	</div>
+
+				          	<div class = "contact-form-grid">
+					            <!--name-->
+					            <div class = "form-field form-field--full">
+					                <label for = "name" class = "form-label"> Full Name </label>
+					                <div class = "form-input-wrap">
+					                    <i class = "fas fa-user form-input-icon" aria-hidden = "true"></i>
+					                    <input  type = "text"
+					                            id = "name"
+					                            name = "stakeholder_name"
+					                            class = "form-input"
+					                            placeholder = "Jane Doe"
+					                            required
+					                            autocomplete = "name" />
+					                </div>
+					            </div>
+
+					            <!--email-->
+					            <div class = "form-field form-field--full">
+					                <label for = "email" class = "form-label"> Email Address </label>
+					                <div class = "form-input-wrap">
+					                    <i class = "fas fa-envelope form-input-icon" aria-hidden = "true"></i>
+					                    <input  type = "email"
+					                            id = "email"
+					                            name = "stakeholder_email"
+					                            class = "form-input"
+					                            placeholder = "jane@example.com"
+					                            required
+					                            autocomplete = "email" />
+					                </div>
+					            </div>
+
+					            <!--message — full width-->
+					            <div class = "form-field form-field--full">
+					              	<label for = "message" class = "form-label"> Your Message </label>
+					              	<div class = "form-input-wrap form-input-wrap--textarea">
+						                <i class = "fas fa-comment-alt form-input-icon form-input-icon--textarea" aria-hidden = "true"></i>
+						                <textarea	id = "message"
+						                  			name = "stakeholder_message"
+						                  			class = "form-input form-input--textarea"
+						                  			placeholder = "Tell us how we can help you . . ."
+						                  			rows = "5"
+						                  			required></textarea>
+					              	</div>
+					            </div>
+				          	</div><!-- /form-grid -->
+
+				          	<div class = "contact-form-footer">
+					            <button type = "submit" class = "contact-submit">
+					              	<i class = "fas fa-paper-plane"></i>
+					              	Send Message
+					            </button>
+					            <p class = "contact-form-note">
+					              	<i class = "fas fa-lock" aria-hidden = "true"></i>
+					              	Your information is private and never shared.
+					            </p>
+				          	</div>
+
+				        </form>
+			      	</div>
+			      	<!--form card end-->
+
+			    </div>
+			</div>
+			<!--main end-->
+
+		</section>
+		<!--contact end-->
+
+    	<!--footer-->
+		<footer class = "footer" aria-label = "Site footer">
+
+			<!--top wave divider-->
+		  	<div class = "footer-wave" aria-hidden = "true">
+		    	<svg 	viewBox = "0 0 1440 60" 
+		    			preserveAspectRatio = "none" 
+		    			xmlns = "http://www.w3.org/2000/svg">
+		      		<path d = "M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill = "#1a0a0b" />
+		    	</svg>
+		  	</div>
+
+		  	<!--footer main-->
+		  	<div class = "footer-main">
+		    	<div class = "container">
+		      		<div class = "footer-grid">
+
+		      			<!--column 1: brand-->
+				        <div class = "footer-col footer-col--brand">
+				          	<a href = "index.html" class = "footer-logo" aria-label = "Miss Hair Affair — Home">
+				            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "footer-logo-img" />
+				            	<span class = "footer-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+				          	</a>
+
+				          	<p class = "footer-brand-desc">
+				            	Premium skin care &amp; beauty products crafted for every woman's ritual. Because she deserves the best.
+				          	</p>
+
+				          	<!--social icons-->
+				          	<div class = "footer-socials" aria-label = "Social media links">
+				            	<a href = "" class = "footer-social-btn" aria-label = "TikTok">
+				              		<i class = "fab fa-tiktok"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Instagram">
+				              		<i class = "fab fa-instagram"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Facebook">
+				              		<i class = "fab fa-facebook-f"></i>
+				            	</a>
+				          	</div>
+				        </div>
+
+				        <!--column 2: quick links-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Quick Links </h3>
+				          
+				          	<nav class = "footer-links" aria-label = "Footer navigation">
+					            <a href = "index.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Home
+					            </a>
+					            <a href = "shop.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Shop
+					            </a>
+					            <a href = "about.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> About
+					            </a>
+					            <a href = "cart.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Cart
+					            </a>
+				          	</nav>
+				        </div>
+
+				        <!--column 3: contact-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Contact Us </h3>
+				          
+				          	<ul class = "footer-contact" aria-label = "Contact details">
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-phone-alt"></i>
+				              		</span>
+				              		<a href = "tel:+254700111222"> +254 700 111 222 </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-envelope"></i>
+				              		</span>
+				              		<a href = "mailto:info@misshairaffair.com"> info@misshairaffair.com </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-map-marker-alt"></i>
+				              		</span>
+				              		<span> Nairobi, Kenya </span>
+				            	</li>
+				          	</ul>
+				        </div>
+
+				        <!--column 4: visit our shop-->
+						<div class = "footer-col">
+						  	<h3 class = "footer-col-title"> Visit Our Shop </h3>
+
+						  	<div class = "footer-location">
+						    	<span class = "footer-location-icon" aria-hidden = "true">
+						      		<i class = "fas fa-map-marker-alt"></i>
+						    	</span>
+
+						    	<address class = "footer-location-address">
+						      		Moi Avenue<br />
+						      		Cubes Exhibition<br />
+						      		Shop No B8
+						    	</address>
+						  	</div>
+
+						  	<a	href = "https://maps.google.com/?q=Cubes+Exhibition+Moi+Avenue+Nairobi"
+						    	class = "footer-location-link"
+						    	target = "_blank"
+						    	rel = "noopener noreferrer">
+						    	<i class = "fas fa-directions"></i> Get Directions
+						  	</a>
+						</div>
+
+		      		</div>
+		      	</div>
+		    </div>
+		    <!--footer main end-->
+
+		    <!--bottom bar-->
+		  	<div class = "footer-bottom">
+			    <div class = "container">
+			      	<div class = "footer-bottom-inner">
+			        	<p class = "footer-copy">
+			          		&copy; Miss Hair Affair, <span id = "year"></span>. All rights reserved.
+			        	</p>
+			        	
+			        	<p class = "footer-designer">
+			          		Designed by <a href = ""> Michael Chan </a>
+			        	</p>
+			      	</div>
+			    </div>
+		  	</div>
+
+		</footer>
+		<!--footer end-->
+
+		<!--whatsapp chat-->
+		<a	href = "https://wa.me/254700111222"
+			class = "whatsapp-btn"
+			id = "whatsappBtn"
+			target = "_blank"
+			rel = "noopener noreferrer"
+			aria-label = "Chat with us on WhatsApp"
+			title = "Chat on WhatsApp">
+			<i class = "fab fa-whatsapp"></i>
+		</a>
+
+		<!--back to top-->
+		<button class = "back-to-top" id = "backToTop" aria-label = "Back to top" title = "Back to top">
+		  	<i class = "fas fa-chevron-up"></i>
+		  	<svg 	class = "back-to-top-ring" 
+		  			viewBox = "0 0 44 44" 
+		  			aria-hidden="true">
+		    		<circle cx = "22" cy = "22" r = "20" />
+		  	</svg>
+		</button>
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript end-->
+
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Processing Payment — Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Fri, Jun 19, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome link-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--minimal checkout header-->
+		<header class = "co-header">
+			<div class = "co-header-bar">
+
+				<!--logo-->
+				<a href = "index.html" class = "co-logo" aria-label = "Miss Hair Affair — Home">
+					<img src = "images/logo.jpg" alt = "" class = "co-logo-img" />
+					<span class = "co-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+				</a>
+
+				<!--secure badge-->
+				<div class = "co-secure" aria-label = "Secure checkout">
+					<i class = "fas fa-lock co-secure-icon"></i>
+					<span> Secure Checkout </span>
+				</div>
+
+			</div>
+
+			<!--step indicator-->
+			<div class = "co-steps" aria-label = "Checkout progress">
+			  	<div class = "co-step co-step--done">
+			    	<span class = "co-step-num"> <i class = "fas fa-check"></i> </span>
+			    	<span class = "co-step-label"> Cart </span>
+			  	</div>
+			  
+			  	<div class = "co-step-line co-step-line--done"></div>
+			  	
+			  	<div class = "co-step co-step--done">
+			    	<span class = "co-step-num"> <i class = "fas fa-check"></i> </span>
+			    	<span class = "co-step-label"> Checkout </span>
+			  	</div>
+
+			  	<div class = "co-step-line co-step-line--done"></div>
+			  	
+			  	<div class = "co-step co-step--active">
+			    	<span class = "co-step-num"> 3 </span>
+			    	<span class = "co-step-label"> Confirmation </span>
+			  	</div>
+			</div>
+		</header>
+		<!--minimal checkout header end-->
+
+		<!--loading main-->
+		<main class = "lp-main">
+			<div class = "lp-container">
+
+				<div class = "lp-card">
+
+					<!--spinner-->
+					<div class = "lp-spinner" role = "status" aria-label = "Processing payment">
+						<span class = "lp-spinner-ring"></span>
+						<i class = "fas fa-lock lp-spinner-icon" aria-hidden = "true"></i>
+					</div>
+
+					<h1 class = "lp-title"> Processing your payment </h1>
+					<p class = "lp-sub"> Please don't close or refresh this page. This will only take a moment. </p>
+
+					<!--reassurance row-->
+					<div class = "lp-secure-row">
+						<i class = "fas fa-shield-halved" aria-hidden = "true"></i>
+						<span> Your transaction is encrypted and secure </span>
+					</div>
+
+				</div>
+
+			</div>
+		</main>
+		<!--loading main end-->
+
+		<!--minimal footer-->
+		<footer class = "co-footer">
+			<p> &copy; Miss Hair Affair, <span id = "year"></span> . All rights reserved. </p>
+		
+			<div class = "co-footer-links">
+		  		<a href = "#"> Privacy Policy </a>
+		  		<a href = "#"> Terms of Service </a>
+		  		<a href = "contact.html"> Help </a>
+			</div>
+		</footer>
+		<!--minimal footer end-->
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript ends-->
+
+	</body>
+</html>

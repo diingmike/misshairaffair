@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Order Confirmed — Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Fri, Jun 19, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome link-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--minimal checkout header-->
+		<header class = "co-header">
+			<div class = "co-header-bar">
+
+				<!--logo-->
+				<a href = "index.html" class = "co-logo" aria-label = "Miss Hair Affair — Home">
+					<img src = "images/logo.jpg" alt = "" class = "co-logo-img" />
+					<span class = "co-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+				</a>
+
+				<!--secure badge-->
+				<div class = "co-secure" aria-label = "Secure checkout">
+					<i class = "fas fa-lock co-secure-icon"></i>
+					<span> Secure Checkout </span>
+				</div>
+
+			</div>
+
+			<!--step indicator-->
+			<div class = "co-steps" aria-label = "Checkout progress">
+			  	<div class = "co-step co-step--done">
+			    	<span class = "co-step-num"> <i class = "fas fa-check"></i> </span>
+			    	<span class = "co-step-label"> Cart </span>
+			  	</div>
+			  
+			  	<div class = "co-step-line co-step-line--done"></div>
+			  	
+			  	<div class = "co-step co-step--done">
+			    	<span class = "co-step-num"> <i class = "fas fa-check"></i> </span>
+			    	<span class = "co-step-label"> Checkout </span>
+			  	</div>
+
+			  	<div class = "co-step-line co-step-line--done"></div>
+			  	
+			  	<div class = "co-step co-step--done">
+			    	<span class = "co-step-num"> <i class = "fas fa-check"></i> </span>
+			    	<span class = "co-step-label"> Confirmation </span>
+			  	</div>
+			</div>
+		</header>
+		<!--minimal checkout header end-->
+
+		<!--success main-->
+		<main class = "rs-main">
+			<div class = "rs-container">
+
+				<!--success banner-->
+				<div class = "rs-banner">
+
+					<div class = "rs-icon rs-icon--success">
+						<i class = "fas fa-check" aria-hidden = "true"></i>
+					</div>
+
+					<h1 class = "rs-title"> Payment Received </h1>
+					<p class = "rs-sub"> Thank you for your order. Your payment was successful and your order is being processed. </p>
+
+					<div class = "rs-email-note">
+						<i class = "fas fa-envelope" aria-hidden = "true"></i>
+						<span> A receipt and order details have been sent to your email. </span>
+					</div>
+
+				</div>
+				<!--success banner end-->
+
+				<!--order summary-->
+				<div class = "rs-summary-wrap">
+			      	<div class = "co-summary-inner">
+
+			        	<h2 class = "co-summary-title"> Order Summary </h2>
+
+				        <!--items-->
+				        <ul class = "co-summary-items">
+				          	<li class = "co-summary-item">
+					            <div class = "co-summary-item-img-wrap">
+					              	<img src = "images/beauty/mascara.jpg" alt = "Mascara" class = "co-summary-item-img" />
+					              	<span class = "co-summary-item-qty" aria-label = "Quantity 2"> 2 </span>
+					            </div>
+
+					            <div class = "co-summary-item-info">
+					              	<span class = "co-summary-item-name"> Mascara </span>
+					              	<span class = "co-summary-item-cat"> Beauty </span>
+					            </div>
+
+					            <span class = "co-summary-item-price"> Ksh 5,000 </span>
+				          	</li>
+
+				          	<li class = "co-summary-item">
+					            <div class = "co-summary-item-img-wrap">
+					              	<img src = "images/beauty/lipstick.png" alt = "Lipstick" class = "co-summary-item-img" />
+					              	<span class = "co-summary-item-qty" aria-label = "Quantity 1"> 1 </span>
+					            </div>
+
+					            <div class = "co-summary-item-info">
+					              	<span class = "co-summary-item-name"> Lipstick </span>
+					              	<span class = "co-summary-item-cat"> Beauty </span>
+					            </div>
+
+					            <span class = "co-summary-item-price"> Ksh 2,500 </span>
+				          	</li>
+				        </ul>
+
+			        	<div class = "co-summary-divider"></div>
+
+			        	<div class = "co-summary-rows">
+							<div class = "co-summary-row">
+								<span> Subtotal </span> <span> Ksh 7,500 </span>
+							</div>
+
+							<div class = "co-summary-row">
+								<span> Shipping </span>
+								<span class = "co-summary-free"> Free </span>
+							</div>
+
+							<div class = "co-summary-row">
+								<span> Discount </span>
+								<span class = "co-summary-discount"> — Ksh 0 </span>
+							</div>
+			        	</div>
+
+			        	<div class = "co-summary-divider"></div>
+
+				        <div class = "co-summary-total">
+				          	<span> Total Paid </span>
+				          	<strong> Ksh 7,500 </strong>
+				        </div>
+
+			      	</div>
+				</div>
+				<!--order summary end-->
+
+				<!--actions-->
+				<div class = "rs-actions">
+					<a href = "shop.html" class = "rs-btn rs-btn--primary">
+						<i class = "fas fa-bag-shopping"></i>
+						Continue Shopping
+					</a>
+
+					<a href = "index.html" class = "rs-btn rs-btn--ghost">
+						Back to Home
+					</a>
+				</div>
+
+			</div>
+		</main>
+		<!--success main end-->
+
+		<!--minimal footer-->
+		<footer class = "co-footer">
+			<p> &copy; Miss Hair Affair, <span id = "year"></span> . All rights reserved. </p>
+		
+			<div class = "co-footer-links">
+		  		<a href = "#"> Privacy Policy </a>
+		  		<a href = "#"> Terms of Service </a>
+		  		<a href = "contact.html"> Help </a>
+			</div>
+		</footer>
+		<!--minimal footer end-->
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript ends-->
+
+	</body>
+</html>

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Mon, May 18, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome link-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--header-->
+    	<section class = "header" id = "site-header">
+    		<!--announcement bar-->
+      		<div class = "header-announcement">
+        		<p> Free shipping on orders over Ksh 9,000 </p>
+      		</div>
+      		
+
+      		<div class = "container">
+        		<header class = "header-inner">
+
+        			<!--logo-->
+		          	<a href = "index.html" class = "logo" aria-label = "Miss Hair Affair — Home">
+		            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "logo-img" />
+		            	<span class = "logo-wordmark"> Miss Hair <em> Affair </em> </span>
+		          	</a>
+		          	<!--logo end-->
+
+		          	<!--primary nav-->
+		          	<nav class = "nav" id = "main-nav" aria-label = "Main navigation">
+		          		<button class = "nav-close" id = "nav-close" aria-label = "Close menu">
+							<i class = "fas fa-times"></i>
+						</button>
+
+		            	<a href = "index.html" class = "nav-link"> Home </a>
+		            	<a href = "shop.html" class = "nav-link"> Shop </a>
+		            	<a href = "about.html" class = "nav-link"> About </a>
+		            	<a href = "contact.html" class = "nav-link"> Contact </a>
+		          	</nav>
+		          	<!--primary nav end-->
+
+		          	<!--actions-->
+		          	<div class = "header-actions">
+		            	<!--search toggle-->
+		            	<button	class = "icon-btn search-toggle" 
+		            			id = "search-toggle" 
+		            			aria-label = "Open search" 
+		            			aria-expanded = "false">
+		              			<i class = "fas fa-search" id = "search-icon"></i>
+		            	</button>
+
+		            	<!--cart count-->
+			            <a 	href = "cart.html" 
+			            	class = "icon-btn cart-btn" 
+			            	aria-label = "Shopping cart, 2 items">
+			              	<i class = "fas fa-shopping-bag"></i>
+			              	<span class = "cart-badge" aria-hidden = "true"> 2 </span>
+			            </a>
+
+			            <!--hamburger (mobile)-->
+			            <button		class = "hamburger" 
+			            			id = "hamburger" 
+			            			aria-label = "Open menu" 
+			            			aria-expanded = "false" 
+			            			aria-controls = "main-nav">
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			            </button>
+		          	</div>
+		          	<!--actions end-->
+
+        		</header>
+        	</div>
+
+        	<!--search bar — slides down under the header bar-->
+	      	<div class = "search-bar" id = "search-bar" aria-hidden = "true">
+	        	<div class = "container">
+	          		<div class = "search-bar--inner">
+	            		<i class = "fas fa-search search-bar--icon"></i>
+	            		
+	            		<input	type = "search"
+	              				id = "search-input"
+	              				class = "search-bar--input"
+	              				placeholder = "Search for products . . ."
+	              				autocomplete = "off"
+	              				aria-label = "Search products" />
+	            		
+	            		<button class = "search-bar--close" id = "search-close" aria-label = "Close search">
+	              			<i class = "fas fa-times"></i>
+	            		</button>
+	          		</div>
+	        	</div>
+	      	</div>
+
+      	</section>
+      	<!--header end-->
+
+      	<!--overlay for mobile nav-->
+    	<div class = "nav-overlay" id = "nav-overlay" aria-hidden = "true"></div>
+
+    	<!--cart-->
+		<section class = "cart" aria-label = "Shopping cart">
+
+			<!--hero band (mirrors contact and about pages)-->
+		  	<div class = "cart-hero">
+			    <div class = "cart-hero-bg" aria-hidden = "true"></div>
+			    
+			    <div class = "container">
+			      	<div class = "cart-hero-inner">
+			        	<p class = "cart-hero-eyebrow">
+			          		<span class = "cart-hero-dash"></span>
+			          		Your Selection
+			          		<span class = "cart-hero-dash"></span>
+			        	</p>
+			        	<h1 class = "cart-hero-headline"> Your <em> Cart </em> </h1>
+			        	<p class = "cart-hero-sub"> Review your items and proceed when you're ready. </p>
+			      	</div>
+			    </div>
+		  	</div>
+
+		  	<!--main-->
+		  	<div class = "container">
+			    <div class = "cart-inner">
+
+			    	<!--cart table-->
+			      	<div class = "cart-table-wrap">
+
+				        <!--table header row-->
+				        <div class = "cart-table-head" role = "row" aria-label = "Cart column headers">
+				          	<span class = "cart-col cart-col--img" aria-hidden = "true"></span>
+				          	<span class = "cart-col cart-col--item"> Product </span>
+				          	<span class = "cart-col cart-col--price"> Price </span>
+				          	<span class = "cart-col cart-col--qty"> Qty </span>
+				          	<span class = "cart-col cart-col--total"> Total </span>
+				          	<span class = "cart-col cart-col--action">
+				            	<button class = "cart-clear-btn" aria-label = "Clear entire cart">
+				              		<i class = "fas fa-trash-alt"></i>
+				              		Clear Cart
+				            	</button>
+				          	</span>
+				        </div>
+
+			        	<!--cart items-->
+			        	<ul class = "cart-list" aria-label = "Cart items">
+
+				          	<!--Item 1-->
+				          	<li class = "cart-item" role = "row">
+					            <div class = "cart-col cart-col--img">
+					              	<div class = "cart-item-img-wrap">
+					                	<img src = "images/beauty/mascara.jpg" alt = "Mascara" class = "cart-item-img" />
+					              	</div>
+					            </div>
+
+					            <div class = "cart-col cart-col--item">
+					              	<span class = "cart-item-name"> Mascara </span>
+					              	<span class = "cart-item-cat"> Beauty </span>
+					            </div>
+
+				            	<div class = "cart-col cart-col--price" data-label = "Price">
+				              		<span> Ksh 2,500 </span>
+				            	</div>
+				            
+					            <div class = "cart-col cart-col--qty" data-label = "Qty">
+					              	<div class = "cart-qty-control" aria-label = "Quantity for Mascara">
+					                	<button class = "cart-qty-btn" aria-label = "Decrease quantity">
+					                  		<i class = "fas fa-minus"></i>
+					                	</button>
+
+					                	<input	type = "number"
+					                  			class = "cart-qty-input"
+					                  			value = "2"
+					                  			min = "1"
+					                  			aria-label = "Quantity"
+					                  			readonly />
+
+					                	<button class = "cart-qty-btn" aria-label = "Increase quantity">
+					                  		<i class = "fas fa-plus"></i>
+					                	</button>
+					              	</div>
+					            </div>
+
+					            <div class = "cart-col cart-col--total" data-label = "Total">
+					              	<strong> Ksh 5,000 </strong>
+					            </div>
+				            
+					            <div class = "cart-col cart-col--action">
+					              	<button class = "cart-remove-btn" aria-label ="Remove Mascara from cart">
+					                	<i class = "fas fa-times"></i>
+					              	</button>
+					            </div>
+				          	</li>
+
+				          	<!--Item 2-->
+				          	<li class = "cart-item" role = "row">
+					            <div class = "cart-col cart-col--img">
+					              	<div class = "cart-item-img-wrap">
+					                	<img src = "images/beauty/lipstick.png" alt = "Lipstick" class = "cart-item-img" />
+					              	</div>
+					            </div>
+
+					            <div class = "cart-col cart-col--item">
+					              	<span class = "cart-item-name"> Lipstick </span>
+					              	<span class = "cart-item-cat"> Beauty </span>
+					            </div>
+
+					            <div class = "cart-col cart-col--price" data-label = "Price">
+					              	<span> Ksh 2,500 </span>
+					            </div>
+
+					            <div class = "cart-col cart-col--qty" data-label = "Qty">
+					              	<div class = "cart-qty-control" aria-label = "Quantity for Lipstick">
+					                	<button class = "cart-qty-btn" aria-label = "Decrease quantity">
+					                  		<i class = "fas fa-minus"></i>
+					                	</button>
+					                
+					                	<input	type = "number"
+					                  			class = "cart-qty-input"
+					                  			value = "1"
+					                  			min = "1"
+					                  			aria-label = "Quantity"
+					                  			readonly />
+
+						                <button class = "cart-qty-btn" aria-label = "Increase quantity">
+						                  	<i class = "fas fa-plus"></i>
+						                </button>
+					              	</div>
+					            </div>
+
+					            <div class = "cart-col cart-col--total" data-label = "Total">
+					              	<strong> Ksh 2,500 </strong>
+					            </div>
+
+					            <div class = "cart-col cart-col--action">
+					              	<button class = "cart-remove-btn" aria-label = "Remove Lipstick from cart">
+					                	<i class = "fas fa-times"></i>
+					              	</button>
+					            </div>
+				          	</li>
+
+			        	</ul>
+
+				        <!--continue shopping-->
+				        <div class = "cart-continue">
+				          	<a href = "shop.html" class = "cart-continue-link">
+				            	<i class = "fas fa-arrow-left"></i>
+				            	Continue Shopping
+				          	</a>
+				        </div>
+
+			      	</div>
+			      	<!--cart table end-->
+
+			      	<!--order summary-->
+			      	<aside class = "cart-summary" aria-label = "Order summary">
+
+				        <h2 class = "cart-summary-title"> Order Summary </h2>
+
+				        <div class = "cart-summary-rows">
+				          	<div class = "cart-summary-row">
+				            	<span> Subtotal (3 items) </span>
+				            	<span> Ksh 7,500 </span>
+				          	</div>
+				          
+				          	<div class = "cart-summary-row">
+				            	<span> Shipping </span>
+				            	<span class = "cart-summary-free"> Free </span>
+				          	</div>
+				          
+				          	<div class = "cart-summary-row">
+				            	<span> Discount </span>
+				            	<span class = "cart-summary-discount"> — Ksh 0 </span>
+				          	</div>
+				        </div>
+
+				        <div class = "cart-summary-divider" aria-hidden = "true"></div>
+
+				        <div class = "cart-summary-total">
+				          	<span> Total </span>
+				          	<strong> Ksh 7,500 </strong>
+				        </div>
+
+				        <!--promo code-->
+				        <div class = "cart-promo">
+				          	<label for = "promo-code" class = "cart-promo-label"> Promo Code </label>
+				          	<div class = "cart-promo-input-wrap">
+					            <input	type = "text"
+					              		id = "promo-code"
+					              		class = "cart-promo-input"
+					              		placeholder = "Enter code (e.g. CARE15)" />
+					            <button class = "cart-promo-btn" aria-label = "Apply promo code"> Apply </button>
+				          	</div>
+				        </div>
+
+				        <a href = "checkout.html" class = "cart-checkout-btn">
+				          	<i class = "fas fa-lock"></i>
+				          	Proceed to Checkout
+				        </a>
+
+				        <!--trust signals-->
+				        <div class = "cart-trust">
+				          	<span> <i class = "fas fa-shield-alt"></i> Secure Checkout </span>
+				          	<span> <i class = "fas fa-undo"></i> 30-Day Returns </span>
+				          	<span> <i class = "fas fa-shipping-fast"></i> Fast Delivery </span>
+				        </div>
+
+			      	</aside>
+			      	<!--order summary end-->
+
+			    </div>
+			</div>
+			<!--main end-->
+
+		</section>
+		<!--cart end-->
+
+    	<!--footer-->
+		<footer class = "footer" aria-label = "Site footer">
+
+			<!--top wave divider-->
+		  	<div class = "footer-wave" aria-hidden = "true">
+		    	<svg 	viewBox = "0 0 1440 60" 
+		    			preserveAspectRatio = "none" 
+		    			xmlns = "http://www.w3.org/2000/svg">
+		      		<path d = "M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill = "#1a0a0b" />
+		    	</svg>
+		  	</div>
+
+		  	<!--footer main-->
+		  	<div class = "footer-main">
+		    	<div class = "container">
+		      		<div class = "footer-grid">
+
+		      			<!--column 1: brand-->
+				        <div class = "footer-col footer-col--brand">
+				          	<a href = "index.html" class = "footer-logo" aria-label = "Miss Hair Affair — Home">
+				            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "footer-logo-img" />
+				            	<span class = "footer-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+				          	</a>
+
+				          	<p class = "footer-brand-desc">
+				            	Premium skin care &amp; beauty products crafted for every woman's ritual. Because she deserves the best.
+				          	</p>
+
+				          	<!--social icons-->
+				          	<div class = "footer-socials" aria-label = "Social media links">
+				            	<a href = "" class = "footer-social-btn" aria-label = "TikTok">
+				              		<i class = "fab fa-tiktok"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Instagram">
+				              		<i class = "fab fa-instagram"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Facebook">
+				              		<i class = "fab fa-facebook-f"></i>
+				            	</a>
+				          	</div>
+				        </div>
+
+				        <!--column 2: quick links-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Quick Links </h3>
+				          
+				          	<nav class = "footer-links" aria-label = "Footer navigation">
+					            <a href = "index.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Home
+					            </a>
+					            <a href = "shop.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Shop
+					            </a>
+					            <a href = "about.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> About
+					            </a>
+					            <a href = "cart.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Cart
+					            </a>
+				          	</nav>
+				        </div>
+
+				        <!--column 3: contact-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Contact Us </h3>
+				          
+				          	<ul class = "footer-contact" aria-label = "Contact details">
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-phone-alt"></i>
+				              		</span>
+				              		<a href = "tel:+254700111222"> +254 700 111 222 </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-envelope"></i>
+				              		</span>
+				              		<a href = "mailto:info@misshairaffair.com"> info@misshairaffair.com </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-map-marker-alt"></i>
+				              		</span>
+				              		<span> Nairobi, Kenya </span>
+				            	</li>
+				          	</ul>
+				        </div>
+
+				        <!--column 4: visit our shop-->
+						<div class = "footer-col">
+						  	<h3 class = "footer-col-title"> Visit Our Shop </h3>
+
+						  	<div class = "footer-location">
+						    	<span class = "footer-location-icon" aria-hidden = "true">
+						      		<i class = "fas fa-map-marker-alt"></i>
+						    	</span>
+
+						    	<address class = "footer-location-address">
+						      		Moi Avenue<br />
+						      		Cubes Exhibition<br />
+						      		Shop No B8
+						    	</address>
+						  	</div>
+
+						  	<a	href = "https://maps.google.com/?q=Cubes+Exhibition+Moi+Avenue+Nairobi"
+						    	class = "footer-location-link"
+						    	target = "_blank"
+						    	rel = "noopener noreferrer">
+						    	<i class = "fas fa-directions"></i> Get Directions
+						  	</a>
+						</div>
+
+		      		</div>
+		      	</div>
+		    </div>
+		    <!--footer main end-->
+
+		    <!--bottom bar-->
+		  	<div class = "footer-bottom">
+			    <div class = "container">
+			      	<div class = "footer-bottom-inner">
+			        	<p class = "footer-copy">
+			          		&copy; Miss Hair Affair, <span id = "year"></span>. All rights reserved.
+			        	</p>
+			        	
+			        	<p class = "footer-designer">
+			          		Designed by <a href = ""> Michael Chan </a>
+			        	</p>
+			      	</div>
+			    </div>
+		  	</div>
+
+		</footer>
+		<!--footer end-->
+
+		<!--whatsapp chat-->
+		<a	href = "https://wa.me/254700111222"
+			class = "whatsapp-btn"
+			id = "whatsappBtn"
+			target = "_blank"
+			rel = "noopener noreferrer"
+			aria-label = "Chat with us on WhatsApp"
+			title = "Chat on WhatsApp">
+			<i class = "fab fa-whatsapp"></i>
+		</a>
+
+		<!--back to top-->
+		<button class = "back-to-top" id = "backToTop" aria-label = "Back to top" title = "Back to top">
+		  	<i class = "fas fa-chevron-up"></i>
+		  	<svg 	class = "back-to-top-ring" 
+		  			viewBox = "0 0 44 44" 
+		  			aria-hidden="true">
+		    		<circle cx = "22" cy = "22" r = "20" />
+		  	</svg>
+		</button>
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript end-->
+
+	</body>
+</html>

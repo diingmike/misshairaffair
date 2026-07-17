@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Mon, May 18, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome link-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--header-->
+    	<section class = "header" id = "site-header">
+    		<!--announcement bar-->
+      		<div class = "header-announcement">
+        		<p> Free shipping on orders over Ksh 9,000 </p>
+      		</div>
+      		
+
+      		<div class = "container">
+        		<header class = "header-inner">
+
+        			<!--logo-->
+		          	<a href = "index.html" class = "logo" aria-label = "Miss Hair Affair — Home">
+		            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "logo-img" />
+		            	<span class = "logo-wordmark"> Miss Hair <em> Affair </em> </span>
+		          	</a>
+		          	<!--logo end-->
+
+		          	<!--primary nav-->
+		          	<nav class = "nav" id = "main-nav" aria-label = "Main navigation">
+		          		<button class = "nav-close" id = "nav-close" aria-label = "Close menu">
+							<i class = "fas fa-times"></i>
+						</button>
+
+		            	<a href = "index.html" class = "nav-link is-active"> Home </a>
+		            	<a href = "shop.html" class = "nav-link"> Shop </a>
+		            	<a href = "about.html" class = "nav-link"> About </a>
+		            	<a href = "contact.html" class = "nav-link"> Contact </a>
+		          	</nav>
+		          	<!--primary nav end-->
+
+		          	<!--actions-->
+		          	<div class = "header-actions">
+		            	<!--search toggle-->
+		            	<button	class = "icon-btn search-toggle" 
+		            			id = "search-toggle" 
+		            			aria-label = "Open search" 
+		            			aria-expanded = "false">
+		              			<i class = "fas fa-search" id = "search-icon"></i>
+		            	</button>
+
+		            	<!--cart count-->
+			            <a 	href = "cart.html" 
+			            	class = "icon-btn cart-btn" 
+			            	aria-label = "Shopping cart, 2 items">
+			              	<i class = "fas fa-shopping-bag"></i>
+			              	<span class = "cart-badge" aria-hidden = "true"> 2 </span>
+			            </a>
+
+			            <!--hamburger (mobile)-->
+			            <button		class = "hamburger" 
+			            			id = "hamburger" 
+			            			aria-label = "Open menu" 
+			            			aria-expanded = "false" 
+			            			aria-controls = "main-nav">
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			            </button>
+		          	</div>
+		          	<!--actions end-->
+
+        		</header>
+        	</div>
+
+        	<!--search bar — slides down under the header bar-->
+	      	<div class = "search-bar" id = "search-bar" aria-hidden = "true">
+	        	<div class = "container">
+	          		<div class = "search-bar--inner">
+	            		<i class = "fas fa-search search-bar--icon"></i>
+	            		
+	            		<input	type = "search"
+	              				id = "search-input"
+	              				class = "search-bar--input"
+	              				placeholder = "Search for products . . ."
+	              				autocomplete = "off"
+	              				aria-label = "Search products" />
+	            		
+	            		<button class = "search-bar--close" id = "search-close" aria-label = "Close search">
+	              			<i class = "fas fa-times"></i>
+	            		</button>
+	          		</div>
+	        	</div>
+	      	</div>
+
+      	</section>
+      	<!--header end-->
+
+      	<!--overlay for mobile nav-->
+    	<div class = "nav-overlay" id = "nav-overlay" aria-hidden = "true"></div>
+
+    	<!--banner-->
+		<section class = "banner" aria-label = "Hero banner">
+			
+			<!--decorative background layers-->
+		  	<div class = "banner-bg">
+		    	<div class = "banner-bg-image" style = "background-image: url('../images/banner.jpg');"> </div>
+		    	<div class = "banner-bg-overlay"></div>
+		    	<div class = "banner-bg-grain"></div>
+		  	</div>
+		  	<!--decorative background layers end-->
+
+		  	<div class = "container">
+		    	<div class = "banner-inner">
+
+		    		<!--text column-->
+			      	<div class = "banner-content">
+
+			      		<!--eyebrow label-->
+			        	<p class = "banner-eyebrow">
+			          		<span class = "banner-eyebrow-line"></span>
+			          		Premium Skincare & Beauty
+			        	</p>
+
+			        	<!--main headline-->
+			        	<h1 class = "banner-headline">
+			          		<span class = "banner-headline-line"> She Cares </span>
+			          		<em class = "banner-headline-line banner-headline-accent"> &amp; So She Glows </em>
+			        	</h1>
+
+			        	<!--sub-copy-->
+			        	<p class = "banner-sub">
+			          		Serving high quality skin care &amp; beauty products crafted for every woman's ritual.
+			        	</p>
+
+			        	<!--CTAs-->
+				        <div class = "banner-actions">
+				          	<a href = "shop.html" class = "btn btn--primary">
+				            	Shop Collection
+				            	<i class = "fas fa-arrow-right btn-icon"></i>
+				          	</a>
+
+				          	<a href = "about.html" class = "btn btn--ghost"> Our Story </a>
+				        </div>
+
+				        <!--trust strip-->
+				        <div class = "banner-trust">
+				          	<span> <i class = "fas fa-leaf"></i> Natural Ingredients </span>
+				          	<span> <i class = "fas fa-heart"></i> Cruelty Free </span>
+				          	<span> <i class = "fas fa-award"></i> Dermatologist Tested </span>
+				        </div>
+
+			      	</div>
+			      	<!--text column end-->
+
+			      	<!--image card column (decorative, hidden at small breakpoints)-->
+			      	<div class = "banner-visual" aria-hidden = "true">
+			        	<div class = "banner-image-card">
+				          	<img src = "images/banner.jpg" alt = "" class = "banner-image-card-img" />
+			        	</div>
+			      	</div>
+			      	<!--image card column end-->
+
+		    	</div>
+		    </div>
+
+		</section>
+		<!--banner end-->
+
+		<!--skin care-->
+		<section class = "skin-care">
+		  	<div class = "container">
+
+		  		<!--section header-->
+		    	<div class = "section-header">
+		      		<p class = "section-eyebrow">
+		        		<span class = "section-eyebrow-line"></span>
+		        		Curated for You
+		      		</p>
+		      		<h2 class = "section-title"> Skin Care Products </h2>
+		      		<p class = "section-sub"> A complete ritual, thoughtfully formulated for radiant, healthy skin. </p>
+		    	</div>
+		    	<!--section header end-->
+
+		    	<!--product grid-->
+			    <div class = "skin-care-grid">
+
+			    	<!--product 1-->
+			    	<article class = "product-card">
+			        	<div class = "product-card-image-wrap">
+			          		<img src = "images/skin-care/cleanser.jpg" alt = "Cleanser" class = "product-card-img" loading = "lazy" />
+			        	</div>
+
+			        	<div class = "product-card-body">
+			          		<h3 class = "product-card-name"> Cleanser </h3>
+			          
+			          		<div class = "product-card-footer">
+			            		<span class = "product-card-price"> Ksh 2,500 </span>
+			            		<button class = "product-card-add" aria-label = "Add Cleanser to cart">
+			              			<i class = "fas fa-shopping-bag"></i>
+			              			<span> Add </span>
+			            		</button>
+			          		</div>
+			        	</div>
+			      	</article>
+
+			      	<!--product 2-->
+			      	<article class = "product-card">
+				        <div class = "product-card-image-wrap">
+				          	<img src = "images/skin-care/toner.jpg" alt = "Toner" class = "product-card-img" loading = "lazy" />
+				        </div>
+
+				        <div class = "product-card-body"> 
+				          	<h3 class = "product-card-name"> Toner </h3>
+				          
+				          	<div class = "product-card-footer">
+				            	<span class = "product-card-price"> Ksh 2,500 </span>
+				            	<button class = "product-card-add" aria-label = "Add Toner to cart">
+				              		<i class = "fas fa-shopping-bag"></i>
+				              		<span> Add </span>
+				            	</button>
+				          	</div>
+
+				        </div>
+			      	</article>
+
+			      	<!--product 3-->
+			      	<article class = "product-card product-card--featured">
+				        <div class = "product-card-image-wrap">
+				          	<img src = "images/skin-care/serum.jpg" alt = "Serum" class = "product-card-img" loading = "lazy" />
+				        </div>
+			        
+				        <div class = "product-card-body">
+				          	<h3 class = "product-card-name"> Serum </h3>
+				          
+				          	<div class = "product-card-footer">
+				            	<span class = "product-card-price"> Ksh 2,500 </span>
+				            	<button class = "product-card-add" aria-label = "Add Serum to cart">
+				              		<i class = "fas fa-shopping-bag"></i>
+				              		<span> Add </span>
+				            	</button>
+				          	</div>
+				        </div>
+			      	</article>
+
+			      	<!--product 4-->
+			      	<article class = "product-card">
+				        <div class = "product-card-image-wrap">
+				          	<img	src = "images/skin-care/moisturizer-2.jpg" 
+				          			alt = "Moisturizer" 
+				          			class = "product-card-img" 
+				          			loading = "lazy" />
+				        </div>
+			        
+				        <div class = "product-card-body">
+				          	<h3 class = "product-card-name"> Moisturizer </h3>
+				          
+				          	<div class = "product-card-footer">
+				            	<span class = "product-card-price"> Ksh 2,500 </span>
+				            	<button class = "product-card-add" aria-label = "Add Moisturizer to cart">
+				              		<i class = "fas fa-shopping-bag"></i>
+				              		<span> Add </span>
+				            	</button>
+				          	</div>
+				        </div>
+			      	</article>
+
+			      	<!--product 5-->
+			      	<article class = "product-card">
+				        <div class = "product-card-image-wrap">
+				          	<img src = "images/skin-care/sunscreen.jpg" alt = "Sunscreen" class = "product-card-img" loading = "lazy" />
+				        </div>
+			        
+				        <div class = "product-card-body">
+				          	<h3 class = "product-card-name"> Sunscreen </h3>
+				          
+				          	<div class = "product-card-footer">
+				            	<span class = "product-card-price"> Ksh 2,500 </span>
+				            	<button class = "product-card-add" aria-label = "Add Sunscreen to cart">
+				              		<i class = "fas fa-shopping-bag"></i>
+				              		<span> Add </span>
+				            	</button>
+				          	</div>
+				        </div>
+			      	</article>
+
+			    </div>
+			    <!--product grid end-->
+
+			    <!--view all CTA-->
+			    <div class = "skin-care-footer">
+			      	<a href = "shop.html" class = "btn-outline">
+			        	View All Products
+			        	<i class = "fas fa-arrow-right"></i>
+			      	</a>
+			    </div>
+
+		  	</div>
+		</section>
+		<!--skin care end-->
+
+		<!--campaign-->
+		<section class = "campaign" aria-label = "Campaign strip">
+
+			<!--decorative layers-->
+		  	<div class = "campaign-bg" aria-hidden = "true">
+		    	<div class = "campaign-bg-grain"></div>
+		    	<div class = "campaign-bg-lines"></div>
+		  	</div>
+		  	<!--decorative layers end-->
+
+		  	<div class = "container">
+		    	<div class = "campaign-inner">
+
+		    		<!--left decorative quote mark-->
+			      	<span class = "campaign-mark" aria-hidden = "true">"</span>
+
+			      	<!--centre content-->
+			      	<div class = "campaign-content">
+			        	<p class = "campaign-eyebrow">
+			          		<span class = "campaign-eyebrow-dash"></span>
+			          		The Miss Hair Affair Promise
+			          		<span class = "campaign-eyebrow-dash"></span>
+			        	</p>
+
+			        	<h2 class = "campaign-headline">
+			          		For Her <em> &amp; Hers </em>
+			        	</h2>
+
+			        	<p class = "campaign-sub">
+			          		Tried &amp; tested for best results — because every woman deserves a ritual she can trust.
+			        	</p>
+			        
+			        	<div class = "campaign-divider" aria-hidden = "true"></div>
+			        	
+			        	<a href = "about.html" class = "campaign-cta">
+			          		Discover Our Story
+			          		<i class = "fas fa-arrow-right"></i>
+			        	</a>
+			      	</div>
+
+			      	<!--stat pills-->
+			      	<div class = "campaign-stats" aria-label = "Brand highlights">
+			        	<div class = "campaign-stat">
+			          		<strong> 5K+ </strong>
+			          		<span> Happy Customers </span>
+			        	</div>
+
+			        	<div class = "campaign-stat-divider" aria-hidden = "true"></div>
+			        
+				        <div class = "campaign-stat">
+				          	<strong> 100% </strong>
+				          	<span> Natural Ingredients </span>
+				        </div>
+
+			        	<div class = "campaign-stat-divider" aria-hidden = "true"></div>
+			        
+				        <div class = "campaign-stat">
+				          	<strong> Dermat. </strong>
+				          	<span> Tested &amp; Approved </span>
+				        </div>
+			      	</div>
+
+		    	</div>
+		    </div>
+
+		</section>
+		<!--campaign end-->
+
+		<!--beauty-->
+		<section class = "beauty" aria-label = "Beauty products">
+		  	<div class = "container">
+
+		  		<!--section header-->
+			    <div class = "section-header">
+			      	<p class = "section-eyebrow">
+			        	<span class = "section-eyebrow-line"></span>
+			        	Colour & Glow
+			        	<span class = "section-eyebrow-line"></span>
+			      	</p>
+			      	<h2 class = "section-title"> Beauty Products </h2>
+			      	<p class = "section-sub"> Bold, buildable, and made to last — beauty tools for every mood and moment. </p>
+			    </div>
+			    <!--section header end-->
+
+			    <!--product grid-->
+			    <div class = "beauty-grid">
+
+			    	<!--product 1-->
+			    	<article class = "product-card">
+				        <div class = "product-card-image-wrap">
+				          	<img src = "images/beauty/lipstick.png" alt = "Lipstick" class = "product-card-img" loading = "lazy" />
+				        </div>
+				        
+				        <div class = "product-card-body">
+				          	<h3 class = "product-card-name"> Lipstick </h3>
+				          
+				          	<div class = "product-card-footer">
+				            	<span class = "product-card-price"> Ksh 2,500 </span>
+				            	<button class = "product-card-add" aria-label = "Add Lipstick to cart">
+				              		<i class = "fas fa-shopping-bag"></i>
+				              		<span> Add </span>
+				            	</button>
+				          	</div>
+				        </div>
+			      	</article>
+
+			      	<!--product 2-->
+			      	<article class = "product-card">
+						<div class = "product-card-image-wrap">
+						  	<img src = "images/beauty/foundation.jpg" alt = "Foundation" class = "product-card-img" loading = "lazy" />
+						</div>
+
+						<div class = "product-card-body">
+						  	<h3 class = "product-card-name"> Foundation </h3>
+						  	
+						  	<div class = "product-card-footer">
+						    	<span class = "product-card-price"> Ksh 2,500 </span>
+						    	<button class = "product-card-add" aria-label = "Add Foundation to cart">
+						      		<i class = "fas fa-shopping-bag"></i>
+						      		<span> Add </span>
+						    	</button>
+						  	</div>
+						</div>
+					</article>
+
+					<!--product 3-->
+					<article class = "product-card product-card--featured">
+						<div class = "product-card-image-wrap">
+						  	<img src = "images/beauty/mascara.jpg" alt = "Mascara" class = "product-card-img" loading = "lazy" />
+						</div>
+
+						<div class = "product-card-body">
+						  	<h3 class = "product-card-name"> Mascara </h3>
+						  
+						  	<div class = "product-card-footer">
+						    	<span class = "product-card-price"> Ksh 2,500 </span>
+						    	<button class = "product-card-add" aria-label = "Add Mascara to cart">
+						      		<i class = "fas fa-shopping-bag"></i>
+						      		<span> Add </span>
+						    	</button>
+						  	</div>
+						</div>
+					</article>
+
+					<!--product 4-->
+					<article class = "product-card">
+						<div class = "product-card-image-wrap">
+						  	<img src = "images/beauty/eyeshadow.jpg" alt = "Eyeshadow" class = "product-card-img" loading = "lazy" />
+						</div>
+
+						<div class = "product-card-body">
+						  	<h3 class="product-card-name">Eyeshadow</h3>
+						  
+						  	<div class = "product-card-footer">
+						    	<span class = "product-card-price"> Ksh 2,500 </span>
+						    	<button class = "product-card-add" aria-label = "Add Eyeshadow to cart">
+						      		<i class = "fas fa-shopping-bag"></i>
+						      		<span> Add </span>
+						    	</button>
+						  	</div>
+						</div>
+					</article>
+
+					<!--product 5-->
+					<article class = "product-card">
+						<div class = "product-card-image-wrap">
+						  	<img src = "images/beauty/lotion.jpg" alt = "Body Lotion" class = "product-card-img" loading = "lazy" />
+						</div>
+
+						<div class = "product-card-body">
+						  	<h3 class = "product-card-name"> Body Lotion </h3>
+						  
+						  	<div class = "product-card-footer">
+						    	<span class = "product-card-price"> Ksh 2,500 </span>
+						    	<button class = "product-card-add" aria-label = "Add Body Lotion to cart">
+						      		<i class = "fas fa-shopping-bag"></i>
+						      		<span> Add </span>
+						    	</button>
+						  	</div>
+						</div>
+					</article>
+
+			    </div>
+			    <!--product grid end-->
+
+			    <!--view all CTA-->
+			    <div class = "beauty-footer">
+			      	<a href = "shop.html" class = "btn-outline btn-outline--dark">
+			        	View All Beauty
+			        	<i class = "fas fa-arrow-right"></i>
+			      	</a>
+			    </div>
+
+		  	</div>
+		</section>
+		<!--beauty end-->
+
+		<!--guarantee-->
+		<section class = "guarantee" aria-label = "Our guarantee">
+
+			<!--decorative background-->
+		  	<div class = "guarantee-bg" aria-hidden = "true"></div>
+
+		  	<div class = "container">
+			    <div class = "guarantee-inner">
+
+			    	<!--left: icon badge-->
+			      	<div class = "guarantee-badge" aria-hidden = "true">
+			        	<div class = "guarantee-badge-ring guarantee-badge-ring--outer"></div>
+			        	<div class = "guarantee-badge-ring guarantee-badge-ring--inner"></div>
+			        	<div class = "guarantee-badge-icon">
+			          		<img src = "images/heart.png" alt = "Floating Heart Image" />
+			        	</div>
+			      	</div>
+
+			      	<!--centre: main promise-->
+			      	<div class = "guarantee-content">
+				        <p class = "guarantee-eyebrow">
+				          	<span class = "guarantee-eyebrow-dash"></span>
+				          	Our Commitment
+				          	<span class = "guarantee-eyebrow-dash"></span>
+				        </p>
+				        <h2 class = "guarantee-headline">
+				          	Guaranteed to Meet Your <br />
+				          	<em> Skin &amp; Body Needs </em>
+				        </h2>
+				        <p class = "guarantee-sub">
+				          	Every product is carefully selected, dermatologist tested, and backed by our
+				          	100% satisfaction promise. If it doesn't work for you, we make it right.
+				        </p>
+			      	</div>
+
+			      	<!--right: trust pillars-->
+			      	<div class = "guarantee-pillars" aria-label = "Guarantee pillars">
+				        <div class = "guarantee-pillar">
+				          	<div class = "guarantee-pillar-icon">
+				            	<i class = "fas fa-shield-alt"></i>
+				          	</div>
+				          
+				          	<div class = "guarantee-pillar-text">
+				            	<strong> Quality Assured </strong>
+				            	<span> Every batch tested before it reaches you </span>
+				          	</div>
+				        </div>
+
+				        <div class = "guarantee-pillar">
+				          	<div class = "guarantee-pillar-icon">
+				            	<i class = "fas fa-undo-alt"></i>
+				          	</div>
+				          
+				          	<div class = "guarantee-pillar-text">
+				            	<strong> Easy Returns </strong>
+				            	<span> 30-day no-questions-asked policy </span>
+				          	</div>
+				        </div>
+
+				        <div class = "guarantee-pillar">
+				          	<div class = "guarantee-pillar-icon">
+				            	<i class = "fas fa-leaf"></i>
+				          	</div>
+				          
+				          	<div class = "guarantee-pillar-text">
+				            	<strong> Clean Formulas </strong>
+				            	<span> No harsh chemicals, ever </span>
+				          	</div>
+				        </div>
+			      	</div>
+
+			    </div>
+			</div>
+
+		</section>
+		<!--guarantee end-->
+
+		<!--footer-->
+		<footer class = "footer" aria-label = "Site footer">
+
+			<!--top wave divider-->
+		  	<div class = "footer-wave" aria-hidden = "true">
+		    	<svg 	viewBox = "0 0 1440 60" 
+		    			preserveAspectRatio = "none" 
+		    			xmlns = "http://www.w3.org/2000/svg">
+		      		<path d = "M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill = "#1a0a0b" />
+		    	</svg>
+		  	</div>
+
+		  	<!--footer main-->
+		  	<div class = "footer-main">
+		    	<div class = "container">
+		      		<div class = "footer-grid">
+
+		      			<!--column 1: brand-->
+				        <div class = "footer-col footer-col--brand">
+				          	<a href = "index.html" class = "footer-logo" aria-label = "Miss Hair Affair — Home">
+				            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "footer-logo-img" />
+				            	<span class = "footer-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+				          	</a>
+
+				          	<p class = "footer-brand-desc">
+				            	Premium skin care &amp; beauty products crafted for every woman's ritual. Because she deserves the best.
+				          	</p>
+
+				          	<!--social icons-->
+				          	<div class = "footer-socials" aria-label = "Social media links">
+				            	<a href = "" class = "footer-social-btn" aria-label = "TikTok">
+				              		<i class = "fab fa-tiktok"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Instagram">
+				              		<i class = "fab fa-instagram"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Facebook">
+				              		<i class = "fab fa-facebook-f"></i>
+				            	</a>
+				          	</div>
+				        </div>
+
+				        <!--column 2: quick links-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Quick Links </h3>
+				          
+				          	<nav class = "footer-links" aria-label = "Footer navigation">
+					            <a href = "index.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Home
+					            </a>
+					            <a href = "shop.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Shop
+					            </a>
+					            <a href = "about.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> About
+					            </a>
+					            <a href = "cart.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Cart
+					            </a>
+				          	</nav>
+				        </div>
+
+				        <!--column 3: contact-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Contact Us </h3>
+				          
+				          	<ul class = "footer-contact" aria-label = "Contact details">
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-phone-alt"></i>
+				              		</span>
+				              		<a href = "tel:+254700111222"> +254 700 111 222 </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-envelope"></i>
+				              		</span>
+				              		<a href = "mailto:info@misshairaffair.com"> info@misshairaffair.com </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-map-marker-alt"></i>
+				              		</span>
+				              		<span> Nairobi, Kenya </span>
+				            	</li>
+				          	</ul>
+				        </div>
+
+				        <!--column 4: visit our shop-->
+						<div class = "footer-col">
+						  	<h3 class = "footer-col-title"> Visit Our Shop </h3>
+
+						  	<div class = "footer-location">
+						    	<span class = "footer-location-icon" aria-hidden = "true">
+						      		<i class = "fas fa-map-marker-alt"></i>
+						    	</span>
+
+						    	<address class = "footer-location-address">
+						      		Moi Avenue<br />
+						      		Cubes Exhibition<br />
+						      		Shop No B8
+						    	</address>
+						  	</div>
+
+						  	<a	href = "https://maps.google.com/?q=Cubes+Exhibition+Moi+Avenue+Nairobi"
+						    	class = "footer-location-link"
+						    	target = "_blank"
+						    	rel = "noopener noreferrer">
+						    	<i class = "fas fa-directions"></i> Get Directions
+						  	</a>
+						</div>
+
+		      		</div>
+		      	</div>
+		    </div>
+		    <!--footer main end-->
+
+		    <!--bottom bar-->
+		  	<div class = "footer-bottom">
+			    <div class = "container">
+			      	<div class = "footer-bottom-inner">
+			        	<p class = "footer-copy">
+			          		&copy; Miss Hair Affair, <span id = "year"></span>. All rights reserved.
+			        	</p>
+			        	
+			        	<p class = "footer-designer">
+			          		Designed by <a href = ""> Michael Chan </a>
+			        	</p>
+			      	</div>
+			    </div>
+		  	</div>
+
+		</footer>
+		<!--footer end-->
+
+		<!--whatsapp chat-->
+		<a	href = "https://wa.me/254700111222"
+			class = "whatsapp-btn"
+			id = "whatsappBtn"
+			target = "_blank"
+			rel = "noopener noreferrer"
+			aria-label = "Chat with us on WhatsApp"
+			title = "Chat on WhatsApp">
+			<i class = "fab fa-whatsapp"></i>
+		</a>
+
+		<!--back to top-->
+		<button class = "back-to-top" id = "backToTop" aria-label = "Back to top" title = "Back to top">
+		  	<i class = "fas fa-chevron-up"></i>
+		  	<svg 	class = "back-to-top-ring" 
+		  			viewBox = "0 0 44 44" 
+		  			aria-hidden="true">
+		    		<circle cx = "22" cy = "22" r = "20" />
+		  	</svg>
+		</button>
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript end-->
+
+	</body>
+</html>

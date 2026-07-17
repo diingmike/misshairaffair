@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Mon, May 18, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome link-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--minimal checkout header-->
+		<header class = "co-header">
+			<div class = "co-header-bar">
+
+				<!--back to cart-->
+				<a href = "cart.html" class = "co-back-btn" aria-label = "Back to cart">
+					<i class = "fas fa-arrow-left"></i>
+					<span> Back to Cart </span>
+				</a>
+
+				<!--logo-->
+				<a href = "index.html" class = "co-logo" aria-label = "Miss Hair Affair — Home">
+					<img src = "images/logo.jpg" alt = "" class = "co-logo-img" />
+					<span class = "co-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+				</a>
+
+				<!--secure badge-->
+				<div class = "co-secure" aria-label = "Secure checkout">
+					<i class = "fas fa-lock co-secure-icon"></i>
+					<span> Secure Checkout </span>
+				</div>
+
+			</div>
+
+			<!--step indicator-->
+			<div class = "co-steps" aria-label = "Checkout progress">
+			  	<div class = "co-step co-step--done">
+			    	<span class = "co-step-num"> <i class = "fas fa-check"></i> </span>
+			    	<span class = "co-step-label"> Cart </span>
+			  	</div>
+			  
+			  	<div class = "co-step-line co-step-line--done"></div>
+			  	
+			  	<div class = "co-step co-step--active">
+			    	<span class = "co-step-num"> 2 </span>
+			    	<span class = "co-step-label"> Checkout </span>
+			  	</div>
+
+			  	<div class = "co-step-line"></div>
+			  	
+			  	<div class = "co-step">
+			    	<span class = "co-step-num"> 3 </span>
+			    	<span class = "co-step-label"> Confirmation </span>
+			  	</div>
+			</div>
+		</header>
+		<!--minimal checkout header end-->
+
+		<!--main checkout layout-->
+		<main class = "co-main">
+			<div class = "co-container">
+		  		<div class = "co-grid">
+
+		  			<!--left: forms-->
+		    		<div class = "co-forms">
+
+		    			<!--1. customer details-->
+						<div class = "co-card">
+							<h2 class = "co-card-title">
+						  		<span class = "co-card-num"> 1 </span>
+						  		Customer Details
+							</h2>
+
+							<div class = "co-form-grid">
+							  	<div class = "form-field">
+								    <label class = "form-label" for = "co-fullname"> Full Name </label>
+								    <div class = "form-input-wrap">
+								      <i class = "fas fa-user form-input-icon" aria-hidden = "true"></i>
+								      <input	type = "text" 
+								      			id = "co-fullname" 
+								      			name = "customer_name"
+								        		class = "form-input" 
+								        		placeholder = "Jane Doe"
+								        		required autocomplete = "name" />
+								    </div>
+							  	</div>
+							  
+							  	<div class = "form-field">
+								    <label class = "form-label" for = "co-email"> Email Address </label>
+								    <div class = "form-input-wrap">
+								      	<i class = "fas fa-envelope form-input-icon" aria-hidden = "true"></i>
+								      	<input	type = "email" 
+								      			id = "co-email" 
+								      			name = "customer_email"
+								        		class = "form-input" 
+								        		placeholder = "jane@example.com"
+								        		required autocomplete = "email" />
+								    </div>
+							  	</div>
+							  
+							  	<div class = "form-field">
+								    <label class = "form-label" for = "co-phone"> Phone Number </label>
+								    <div class = "form-input-wrap">
+								      <i class = "fas fa-phone-alt form-input-icon" aria-hidden = "true"></i>
+								      <input	type = "tel" 
+								      			id = "co-phone" 
+								      			name = "customer_phone"
+								        		class = "form-input" 
+								        		placeholder = "+254 7XX XXX XXX"
+								        		required autocomplete = "tel" />
+								    </div>
+							  	</div>
+
+							  	<div class = "form-field">
+								    <label class = "form-label" for = "co-address"> Delivery Address </label>
+								    <div class = "form-input-wrap">
+								      	<i class = "fas fa-map-marker-alt form-input-icon" aria-hidden = "true"></i>
+								      	<input	type = "text" 
+								      			id = "co-address" 
+								      			name = "customer_address"
+								        		class = "form-input" 
+								        		placeholder = "Street, Estate, Nairobi"
+								        		autocomplete = "street-address" />
+								    </div>
+							  	</div>
+							</div>
+						</div>
+						<!--customer details end-->
+
+						<!--2. payment method-->
+						<div class = "co-card">
+							<h2 class = "co-card-title">
+						  		<span class = "co-card-num"> 2 </span>
+						  		Payment Method
+							</h2>
+
+							<!--payment tabs-->
+							<div class = "co-pay-tabs" role = "tablist" aria-label = "Choose payment method">
+							  	<button	class = "co-pay-tab co-pay-tab--active"
+							    		id = "tab-mpesa" 
+							    		role = "tab" 
+							    		aria-selected = "true"
+							    		aria-controls = "panel-mpesa" 
+							    		data-target = "panel-mpesa">
+							    	<div class = "co-pay-tab-logo co-pay-tab-logo--mpesa"> M </div>
+							    	M-Pesa
+							  </button>
+							  
+							  <button	class = "co-pay-tab"
+							    		id = "tab-card" 
+							    		role = "tab" 
+							    		aria-selected = "false"
+							    		aria-controls = "panel-card" 
+							    		data-target = "panel-card">
+							    	<div class = "co-pay-tab-logo co-pay-tab-logo--card">
+							      		<i class = "fas fa-credit-card"></i>
+							    	</div>
+							    	Card
+							  </button>
+							</div>
+
+							<!--M-Pesa panel-->
+							<div	class = "co-pay-panel co-pay-panel--active" 
+							  		id = "panel-mpesa" 
+							  		role = "tabpanel" 
+							  		aria-labelledby = "tab-mpesa">
+
+							  	<div class = "co-mpesa-wrap">
+								    <!--badge-->
+								    <div class = "co-mpesa-badge" aria-hidden = "true">
+								      	<span class = "co-mpesa-badge-m"> M </span>
+								      	<span class = "co-mpesa-badge-pesa"> -PESA </span>
+								    </div>
+
+								    <!--instructions-->
+								    <div class = "co-mpesa-instructions">
+								      	<p class = "co-mpesa-instructions-title">
+								        	<i class = "fas fa-mobile-alt"></i>
+								        	How to pay with M-Pesa
+								      	</p>
+
+								      	<ol class = "co-mpesa-instructions-list">
+									        <li> Open M-Pesa on your phone </li>
+									        <li> Select <strong> Lipa na M-Pesa → Paybill </strong> </li>
+									        <li> Business No: <strong> 123456 </strong> </li>
+									        <li> Account No: <strong> Your Order ID (sent via email) </strong> </li>
+									        <li> Amount: <strong> Ksh 7,500 </strong> </li>
+									        <li> Enter your M-Pesa PIN and confirm </li>
+								      	</ol>
+								    </div>
+							  	</div>
+
+							  	<div class = "co-mpesa-divider">
+							    	<span> or receive an STK push </span>
+							  	</div>
+
+							  	<div class = "form-field">
+								    <label class = "form-label" for = "co-mpesa-phone"> M-Pesa Number for STK Push </label>
+								    <div class = "form-input-wrap">
+								      	<i class = "fas fa-mobile-alt form-input-icon" aria-hidden = "true"></i>
+								      	<input	type = "tel" 
+								      			id = "co-mpesa-phone" 
+								      			name = "mpesa_phone"
+								        		class = "form-input" 
+								        		placeholder = "+254 7XX XXX XXX" />
+								    </div>
+								    <p class = "form-field-hint">
+								      	<i class = "fas fa-info-circle" aria-hidden = "true"></i>
+								      	A payment prompt will be sent directly to this number.
+								    </p>
+							  	</div>
+							</div>
+							<!--MPesa panel end-->
+
+							<!--card panel-->
+							<div	class = "co-pay-panel" 
+									id = "panel-card"
+							  		role = "tabpanel" 
+							  		aria-labelledby = "tab-card" hidden>
+
+							  	<!--accepted card logos-->
+							  	<div class = "co-card-logos" aria-label = "Accepted cards">
+								    <span class = "co-card-logo co-card-logo--visa"> VISA </span>
+								    <span class = "co-card-logo co-card-logo--mc">
+								      	<span class = "co-mc-circle co-mc-circle--red"></span>
+								      	<span class = "co-mc-circle co-mc-circle--orange"></span>
+								    </span>
+								    <span class = "co-card-logo co-card-logo--amex"> AMEX </span>
+							  	</div>
+
+							  	<div class = "co-form-grid">
+								    <div class = "form-field form-field--full">
+								      	<label class = "form-label" for = "co-card-name"> Name on Card </label>
+								      	<div class = "form-input-wrap">
+								        	<i class = "fas fa-user form-input-icon" aria-hidden = "true"></i>
+								        	<input	type = "text" 
+								        			id = "co-card-name" 
+								        			name = "card_name"
+								          			class = "form-input" 
+								          			placeholder = "Jane Doe" 
+								          			autocomplete = "cc-name" />
+								      	</div>
+								    </div>
+
+								    <div class = "form-field form-field--full">
+								      	<label class = "form-label" for = "co-card-number"> Card Number </label>
+								      	<div class = "form-input-wrap">
+								        	<i class = "fas fa-credit-card form-input-icon" aria-hidden = "true"></i>
+								        	<input	type = "text" 
+								        			id = "co-card-number" 
+								        			name = "card_number"
+								          			class = "form-input" 
+								          			placeholder = "0000  0000  0000  0000"
+								          			maxlength = "19" 
+								          			autocomplete = "cc-number" 
+								          			inputmode = "numeric" />
+								      	</div>
+								    </div>
+
+								    <div class = "form-field">
+								      	<label class = "form-label" for = "co-expiry"> Expiry Date </label>
+								      	<div class = "form-input-wrap">
+								        	<i class = "fas fa-calendar-alt form-input-icon" aria-hidden = "true"></i>
+								        	<input	type = "text" 
+								        			id = "co-expiry" 
+								        			name = "card_expiry"
+								          			class = "form-input" 
+								          			placeholder = "MM / YY"
+								          			maxlength = "7" 
+								          			autocomplete = "cc-exp" 
+								          			inputmode = "numeric" />
+								      	</div>
+								    </div>
+
+								    <div class = "form-field">
+								      	<label class = "form-label" for = "co-cvv">
+								        	CVV
+								        	<button type = "button" class = "co-cvv-help" aria-label = "What is CVV?">
+								          		<i class = "fas fa-question-circle"></i>
+								        	</button>
+								      	</label>
+								      
+								      	<div class = "form-input-wrap">
+								        	<i class = "fas fa-lock form-input-icon" aria-hidden = "true"></i>
+								        	<input	type = "text" 
+								        			id = "co-cvv" 
+								        			name = "card_cvv"
+								          			class = "form-input" 
+								          			placeholder = "•••"
+								          			maxlength = "4" 
+								          			autocomplete = "cc-csc" 
+								          			inputmode = "numeric" />
+								      	</div>
+								    </div>
+							  	</div>
+							</div>
+							<!--card panel end-->
+
+						</div>
+						<!--payment method end-->
+
+		    		</div>
+		    		<!--forms end-->
+
+		    		<!--RIGHT: order summary-->
+		    		<aside class = "co-summary" aria-label = "Order summary">
+				      	<div class = "co-summary-inner">
+
+				        	<h2 class = "co-summary-title"> Order Summary </h2>
+
+					        <!--items-->
+					        <ul class = "co-summary-items">
+					          	<li class = "co-summary-item">
+						            <div class = "co-summary-item-img-wrap">
+						              	<img src = "images/beauty/mascara.jpg" alt = "Mascara" class = "co-summary-item-img" />
+						              	<span class = "co-summary-item-qty" aria-label = "Quantity 2"> 2 </span>
+						            </div>
+
+						            <div class = "co-summary-item-info">
+						              	<span class = "co-summary-item-name"> Mascara </span>
+						              	<span class = "co-summary-item-cat"> Beauty </span>
+						            </div>
+
+						            <span class = "co-summary-item-price"> Ksh 5,000 </span>
+					          	</li>
+
+					          	<li class = "co-summary-item">
+						            <div class = "co-summary-item-img-wrap">
+						              	<img src = "images/beauty/lipstick.png" alt = "Lipstick" class = "co-summary-item-img" />
+						              	<span class = "co-summary-item-qty" aria-label = "Quantity 1"> 1 </span>
+						            </div>
+
+						            <div class = "co-summary-item-info">
+						              	<span class = "co-summary-item-name"> Lipstick </span>
+						              	<span class = "co-summary-item-cat"> Beauty </span>
+						            </div>
+
+						            <span class = "co-summary-item-price"> Ksh 2,500 </span>
+					          	</li>
+					        </ul>
+
+				        	<div class = "co-summary-divider"></div>
+
+				        	<div class = "co-summary-rows">
+								<div class = "co-summary-row">
+									<span> Subtotal </span> <span> Ksh 7,500 </span>
+								</div>
+
+								<div class = "co-summary-row">
+									<span> Shipping </span>
+									<span class = "co-summary-free"> Free </span>
+								</div>
+
+								<div class = "co-summary-row">
+									<span> Discount </span>
+									<span class = "co-summary-discount"> — Ksh 0 </span>
+								</div>
+				        	</div>
+
+				        	<div class = "co-summary-divider"></div>
+
+					        <div class = "co-summary-total">
+					          	<span> Total </span>
+					          	<strong> Ksh 7,500 </strong>
+					        </div>
+
+					        <button type = "submit" class = "co-place-order" id = "co-place-order">
+					          	<i class = "fas fa-lock"></i>
+					          	Place Order
+					        </button>
+
+					        <div class = "co-trust">
+					          	<span> <i class = "fas fa-shield-alt"></i> 256-bit SSL </span>
+					          	<span> <i class = "fas fa-undo"></i> 30-Day Returns </span>
+					          	<span> <i class = "fas fa-shipping-fast"></i> Fast Delivery </span>
+					        </div>
+
+				      	</div>
+		    		</aside>
+		    		<!--order summary end-->
+
+		  		</div>
+		  	</div>
+		</main>
+		<!--main checkout layout end-->
+
+		<!--minimal footer-->
+		<footer class = "co-footer">
+			<p> &copy; Miss Hair Affair, <span id = "year"></span> . All rights reserved. </p>
+		
+			<div class = "co-footer-links">
+		  		<a href = "#"> Privacy Policy </a>
+		  		<a href = "#"> Terms of Service </a>
+		  		<a href = "contact.html"> Help </a>
+			</div>
+		</footer>
+		<!--minimal footer end-->
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript ends-->
+
+	</body>
+</html>

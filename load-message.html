@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Sun, Jul 05, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--minimal header-->
+		<header class = "lm-header">
+			<a href = "<?php echo SITEURL; ?>" class = "co-logo" aria-label = "Miss Hair Affair — Home">
+				<img src = "images/logo.jpg" alt = "" class = "co-logo-img" />
+				<span class = "co-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+			</a>
+		</header>
+		<!--minimal header end-->
+
+		<!--loading main-->
+		<main class = "lm-main">
+			<div class = "lm-container">
+
+				<div class = "lm-card">
+
+					<!--spinner-->
+					<div class = "lm-spinner" role = "status" aria-label = "Sending message">
+						<span class = "lm-spinner-ring"></span>
+						<i class = "fas fa-paper-plane lm-spinner-icon" aria-hidden = "true"></i>
+					</div>
+
+					<h1 class = "lm-title"> Sending your message </h1>
+					<p class = "lm-sub"> Please don't close or refresh this page. Your message is on its way. </p>
+
+					<!--reassurance row-->
+					<div class = "lm-note-row">
+						<i class = "fas fa-envelope-circle-check" aria-hidden = "true"></i>
+						<span> We'll get back to you as soon as possible </span>
+					</div>
+
+				</div>
+
+			</div>
+		</main>
+		<!--loading main end-->
+
+		<!--minimal footer-->
+		<footer class = "co-footer">
+			<p> &copy; Miss Hair Affair, <span id = "year"></span> . All rights reserved. </p>
+
+			<div class = "co-footer-links">
+		  		<a href = "#"> Privacy Policy </a>
+		  		<a href = "#"> Terms of Service </a>
+		  		<a href = "<?php echo SITEURL; ?>/contact"> Help </a>
+			</div>
+		</footer>
+		<!--minimal footer end-->
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript end-->
+
+	</body>
+</html>

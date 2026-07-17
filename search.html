@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title> Miss Hair Affair </title>
+
+		<meta charset = "UTF-8" />
+		<meta name = "author" content = "Michael Chan" /> <!--date of creation; Mon, May 18, 2026-->
+		<meta name = "viewport" content = "width=device-width,initial-scale=1,shrink-to-fit=no" />
+
+		<!--browser icon-->
+		<link	rel = "icon" 
+				href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">👸</text></svg>' />
+
+		<!--custom css-->
+		<link rel = "stylesheet" href = "css/style.css" />
+
+		<!--font awesome link-->
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+		<!--google font, Roboto-->
+		<link rel = "preconnect" href = "https://fonts.googleapis.com" />
+		<link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin />
+		<link href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel = "stylesheet" />
+	</head>
+
+	<body>
+
+		<!--header-->
+    	<section class = "header" id = "site-header">
+    		<!--announcement bar-->
+      		<div class = "header-announcement">
+        		<p> Free shipping on orders over Ksh 9,000 </p>
+      		</div>
+      		
+
+      		<div class = "container">
+        		<header class = "header-inner">
+
+        			<!--logo-->
+		          	<a href = "index.html" class = "logo" aria-label = "Miss Hair Affair — Home">
+		            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "logo-img" />
+		            	<span class = "logo-wordmark"> Miss Hair <em> Affair </em> </span>
+		          	</a>
+		          	<!--logo end-->
+
+		          	<!--primary nav-->
+		          	<nav class = "nav" id = "main-nav" aria-label = "Main navigation">
+		          		<button class = "nav-close" id = "nav-close" aria-label = "Close menu">
+							<i class = "fas fa-times"></i>
+						</button>
+
+		            	<a href = "index.html" class = "nav-link"> Home </a>
+		            	<a href = "shop.html" class = "nav-link"> Shop </a>
+		            	<a href = "about.html" class = "nav-link"> About </a>
+		            	<a href = "contact.html" class = "nav-link"> Contact </a>
+		          	</nav>
+		          	<!--primary nav end-->
+
+		          	<!--actions-->
+		          	<div class = "header-actions">
+		            	<!--search toggle-->
+		            	<button	class = "icon-btn search-toggle" 
+		            			id = "search-toggle" 
+		            			aria-label = "Open search" 
+		            			aria-expanded = "false">
+		              			<i class = "fas fa-search" id = "search-icon"></i>
+		            	</button>
+
+		            	<!--cart count-->
+			            <a 	href = "cart.html" 
+			            	class = "icon-btn cart-btn" 
+			            	aria-label = "Shopping cart, 2 items">
+			              	<i class = "fas fa-shopping-bag"></i>
+			              	<span class = "cart-badge" aria-hidden = "true"> 2 </span>
+			            </a>
+
+			            <!--hamburger (mobile)-->
+			            <button		class = "hamburger" 
+			            			id = "hamburger" 
+			            			aria-label = "Open menu" 
+			            			aria-expanded = "false" 
+			            			aria-controls = "main-nav">
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			              		<span class = "hamburger-bar"></span>
+			            </button>
+		          	</div>
+		          	<!--actions end-->
+
+        		</header>
+        	</div>
+
+        	<!--search bar — slides down under the header bar-->
+	      	<div class = "search-bar" id = "search-bar" aria-hidden = "true">
+	        	<div class = "container">
+	          		<div class = "search-bar--inner">
+	            		<i class = "fas fa-search search-bar--icon"></i>
+	            		
+	            		<input	type = "search"
+	              				id = "search-input"
+	              				class = "search-bar--input"
+	              				placeholder = "Search for products . . ."
+	              				autocomplete = "off"
+	              				aria-label = "Search products" />
+	            		
+	            		<button class = "search-bar--close" id = "search-close" aria-label = "Close search">
+	              			<i class = "fas fa-times"></i>
+	            		</button>
+	          		</div>
+	        	</div>
+	      	</div>
+
+      	</section>
+      	<!--header end-->
+
+      	<!--overlay for mobile nav-->
+    	<div class = "nav-overlay" id = "nav-overlay" aria-hidden = "true"></div>
+
+    	<!--shop-->
+    	<main class = "shop">
+
+    		<!--results headline-->
+			<div class = "search-results-head">
+			    <div class = "container">
+			        <div class = "search-results-row">
+			            <span class = "search-results-eyebrow"> Search Results </span>
+			            <h1 class = "search-results-headline">
+			                Results for <span id = "search-results-query"> hair oil </span>
+			            </h1>
+			        </div>
+			        <div class = "search-results-rule" aria-hidden = "true"></div>
+			    </div>
+			</div>
+			<!--results headline end-->
+
+    		<div class = "container">
+
+		    	<!--result count-->
+		    	<p class = "shop-result-count">
+		    		<span id = "shop-count"> 2 </span> results
+		    	</p>
+
+		    	<!--product grid-->
+		    	<div class = "shop-grid" id = "shop-grid">
+
+
+		    		<!--6-->
+		    		<article class = "product-card" data-category = "skin-care" data-name = "Rose Hip Face Oil" data-price = "2800">
+		    			<div class = "product-card-image-wrap">
+		    				<img src = "images/skin-care/rose-hip-oil.png" alt = "Rose Hip Face Oil" class = "product-card-img" loading = "lazy" />
+		    			</div>
+		    			<div class = "product-card-body">
+		    				<h3 class = "product-card-name"> Rose Hip Face Oil </h3>
+		    				<div class = "product-card-footer">
+		    					<span class = "product-card-price"> Ksh 2,800 </span>
+		    					<button class = "product-card-add" aria-label = "Add Rose Hip Face Oil to cart">
+		    						<i class = "fas fa-shopping-bag"></i>
+		    						<span> Add </span>
+		    					</button>
+		    				</div>
+		    			</div>
+		    		</article>
+
+		    		<!--9-->
+		    		<article class = "product-card" data-category = "skin-care" data-name = "Hyaluronic Moisturiser" data-price = "2900">
+		    			<div class = "product-card-image-wrap">
+		    				<img src = "images/skin-care/hyaluronic-moisturiser.jpg" alt = "Hyaluronic Moisturiser" class = "product-card-img" loading = "lazy" />
+		    			</div>
+		    			<div class = "product-card-body">
+		    				<h3 class = "product-card-name"> Hyaluronic Moisturiser </h3>
+		    				<div class = "product-card-footer">
+		    					<span class = "product-card-price"> Ksh 2,900 </span>
+		    					<button class = "product-card-add" aria-label = "Add Hyaluronic Moisturiser to cart">
+		    						<i class = "fas fa-shopping-bag"></i>
+		    						<span> Add </span>
+		    					</button>
+		    				</div>
+		    			</div>
+		    		</article>
+
+		    	</div>
+		    	<!--product grid end-->
+
+		    	<!--empty state-->
+		    	<div class = "shop-empty" id = "shop-empty" hidden>
+		    		<div class = "shop-empty-icon">
+		    			<i class = "fas fa-magnifying-glass" aria-hidden = "true"></i>
+		    		</div>
+		    		<p class = "shop-empty-title"> No results found </p>
+		    		<p class = "shop-empty-sub"> We couldn't find anything matching your search. Try a different term or browse all products. </p>
+		    		<a href = "shop.html" class = "shop-empty-btn"> Browse All Products </a>
+		    	</div>
+
+    		</div>
+
+    	</main>
+    	<!--shop end-->
+
+    	<!--footer-->
+		<footer class = "footer" aria-label = "Site footer">
+
+			<!--top wave divider-->
+		  	<div class = "footer-wave" aria-hidden = "true">
+		    	<svg 	viewBox = "0 0 1440 60" 
+		    			preserveAspectRatio = "none" 
+		    			xmlns = "http://www.w3.org/2000/svg">
+		      		<path d = "M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,60 L0,60 Z" fill = "#1a0a0b" />
+		    	</svg>
+		  	</div>
+
+		  	<!--footer main-->
+		  	<div class = "footer-main">
+		    	<div class = "container">
+		      		<div class = "footer-grid">
+
+		      			<!--column 1: brand-->
+				        <div class = "footer-col footer-col--brand">
+				          	<a href = "index.html" class = "footer-logo" aria-label = "Miss Hair Affair — Home">
+				            	<img src = "images/logo.jpg" alt = "Miss Hair Affair logo" class = "footer-logo-img" />
+				            	<span class = "footer-logo-wordmark"> Miss Hair <em> Affair </em> </span>
+				          	</a>
+
+				          	<p class = "footer-brand-desc">
+				            	Premium skin care &amp; beauty products crafted for every woman's ritual. Because she deserves the best.
+				          	</p>
+
+				          	<!--social icons-->
+				          	<div class = "footer-socials" aria-label = "Social media links">
+				            	<a href = "" class = "footer-social-btn" aria-label = "TikTok">
+				              		<i class = "fab fa-tiktok"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Instagram">
+				              		<i class = "fab fa-instagram"></i>
+				            	</a>
+				            	<a href = "" class = "footer-social-btn" aria-label = "Facebook">
+				              		<i class = "fab fa-facebook-f"></i>
+				            	</a>
+				          	</div>
+				        </div>
+
+				        <!--column 2: quick links-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Quick Links </h3>
+				          
+				          	<nav class = "footer-links" aria-label = "Footer navigation">
+					            <a href = "index.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Home
+					            </a>
+					            <a href = "shop.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Shop
+					            </a>
+					            <a href = "about.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> About
+					            </a>
+					            <a href = "cart.html" class = "footer-link">
+					              	<i class = "fas fa-chevron-right"></i> Cart
+					            </a>
+				          	</nav>
+				        </div>
+
+				        <!--column 3: contact-->
+				        <div class = "footer-col">
+				          	<h3 class = "footer-col-title"> Contact Us </h3>
+				          
+				          	<ul class = "footer-contact" aria-label = "Contact details">
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-phone-alt"></i>
+				              		</span>
+				              		<a href = "tel:+254700111222"> +254 700 111 222 </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-envelope"></i>
+				              		</span>
+				              		<a href = "mailto:info@misshairaffair.com"> info@misshairaffair.com </a>
+				            	</li>
+
+				            	<li class = "footer-contact-item">
+				              		<span class = "footer-contact-icon" aria-hidden = "true">
+				                		<i class = "fas fa-map-marker-alt"></i>
+				              		</span>
+				              		<span> Nairobi, Kenya </span>
+				            	</li>
+				          	</ul>
+				        </div>
+
+				        <!--column 4: visit our shop-->
+						<div class = "footer-col">
+						  	<h3 class = "footer-col-title"> Visit Our Shop </h3>
+
+						  	<div class = "footer-location">
+						    	<span class = "footer-location-icon" aria-hidden = "true">
+						      		<i class = "fas fa-map-marker-alt"></i>
+						    	</span>
+
+						    	<address class = "footer-location-address">
+						      		Moi Avenue<br />
+						      		Cubes Exhibition<br />
+						      		Shop No B8
+						    	</address>
+						  	</div>
+
+						  	<a	href = "https://maps.google.com/?q=Cubes+Exhibition+Moi+Avenue+Nairobi"
+						    	class = "footer-location-link"
+						    	target = "_blank"
+						    	rel = "noopener noreferrer">
+						    	<i class = "fas fa-directions"></i> Get Directions
+						  	</a>
+						</div>
+
+		      		</div>
+		      	</div>
+		    </div>
+		    <!--footer main end-->
+
+		    <!--bottom bar-->
+		  	<div class = "footer-bottom">
+			    <div class = "container">
+			      	<div class = "footer-bottom-inner">
+			        	<p class = "footer-copy">
+			          		&copy; Miss Hair Affair, <span id = "year"></span>. All rights reserved.
+			        	</p>
+			        	
+			        	<p class = "footer-designer">
+			          		Designed by <a href = ""> Michael Chan </a>
+			        	</p>
+			      	</div>
+			    </div>
+		  	</div>
+
+		</footer>
+		<!--footer end-->
+
+		<!--whatsapp chat-->
+		<a	href = "https://wa.me/254700111222"
+			class = "whatsapp-btn"
+			id = "whatsappBtn"
+			target = "_blank"
+			rel = "noopener noreferrer"
+			aria-label = "Chat with us on WhatsApp"
+			title = "Chat on WhatsApp">
+			<i class = "fab fa-whatsapp"></i>
+		</a>
+
+		<!--back to top-->
+		<button class = "back-to-top" id = "backToTop" aria-label = "Back to top" title = "Back to top">
+		  	<i class = "fas fa-chevron-up"></i>
+		  	<svg 	class = "back-to-top-ring" 
+		  			viewBox = "0 0 44 44" 
+		  			aria-hidden="true">
+		    		<circle cx = "22" cy = "22" r = "20" />
+		  	</svg>
+		</button>
+
+		<!--javascript-->
+		<script src = "js/script.js"></script>
+		<!--javascript end-->
+
+	</body>
+</html>
